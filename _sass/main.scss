@@ -64,6 +64,16 @@ section#hero{
   }
 }
 
+section#info{
+  display: flex;
+  flex-direction: row;
+  padding: 96px;
+
+  .text, img {
+    width: 50%;
+  }
+}
+
 .current {
   color: green;
 }
