@@ -1,3 +1,46 @@
+$color-text-light-default: rgba(255,255,255,.9);
+$color-text-light-highlight: rgba(255,255,255,1);
+$color-brand-green-default: rgba(40,100,90,1);
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header{
+  background-color: $color-brand-green-default;
+
+  nav{
+    display: flex;
+    flex-direction: row;
+  }
+
+  span{
+    flex-grow: 1;
+  }
+
+  a{
+    display: block;
+    padding: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    color: $color-text-light-default;
+
+    &:hover{
+      color: $color-text-light-highlight;
+      background-color: rgba(255,255,255,.1);
+    }
+  }
+
+  img{
+    height: 24px;
+    display: block;
+  }
+}
+
 .current {
   color: green;
 }

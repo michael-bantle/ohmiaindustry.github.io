@@ -1,6 +1,12 @@
-- name: Home
-  link: /
 - name: About
   link: /about.html
 - name: Posts
   link: /posts.html
+- name: LinkedIn
+  link: https://linkedin.com
+  target: _blank
+  icon: linkedin
+- name: Facebook
+  link: https://facebook.com
+  target: _blank
+  icon: facebook
