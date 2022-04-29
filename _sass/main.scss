@@ -1,6 +1,7 @@
 $color-text-light-default: rgba(255,255,255,.9);
 $color-text-light-highlight: rgba(255,255,255,1);
 $color-brand-green-default: rgba(40,100,90,1);
+$color-brand-green-overlay: rgba(40,100,90,.5);
 
 html, body{
   margin: 0;
@@ -38,6 +39,28 @@ header{
   img{
     height: 24px;
     display: block;
+  }
+}
+
+section#hero{
+  padding: 384px 96px 96px 96px;
+  background-image: linear-gradient($color-brand-green-overlay, $color-brand-green-overlay), url("/assets/images/hero1.jpg");
+  background-size: cover;
+  background-position: center center;
+  color: $color-text-light-default;
+
+  h1{
+    font-size: 64px;
+    line-height: 96px;
+    margin: 0 0 48px 0;
+    font-weight: bold;
+  }
+
+  p.lead{
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 48px 0;
+    font-weight: normal;
   }
 }
 
