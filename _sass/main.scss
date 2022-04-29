@@ -67,13 +67,40 @@ section#hero{
 section#info{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 96px;
 
   .text, img {
-    width: 50%;
+    width: calc(50% - 24px);
   }
 }
 
 .current {
   color: green;
+}
+
+section#posts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 96px;
+  background-color: $color-brand-green-default;
+
+  .section-heading{
+    width: 100%;
+    margin-bottom: 48px;
+    display: flex;
+
+    h2{
+      flex-grow: 1;
+    }
+  }
+
+  article {
+    width: calc(50% - 24px);
+    background-color: #fff;
+    padding: 24px;
+    box-sizing: border-box;
+  }
 }

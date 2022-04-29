@@ -19,3 +19,17 @@ title: Home
   <img src="/assets/images/{{section.image}}">
   {% endif %}
 </section>
+
+<section id="posts">
+  <div class="section-heading">
+    <h2>Posts</h2>
+    <a href="/posts">Se alle</a>
+  </div>
+  {% for post in site.posts limit:2 %}
+    <article>
+      <h3>{{ post.title }}</h3>
+      {{ post.excerpt }}
+      <a href="{{ post.url }}">Les mer om {{ post.title | downcase }}</a>
+    </article>
+  {% endfor %}
+</section>
