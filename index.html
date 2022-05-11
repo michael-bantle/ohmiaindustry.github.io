@@ -3,20 +3,40 @@ layout: default
 title: Home
 ---
 
+{% assign hero = site.categories.sections | where: "title", "Hero" | first %}
+{% assign illustration = site.categories.sections | where: "title", "Illustration" | first %}
+{% assign about = site.categories.sections | where: "title", "About" | first %}
+
 <section id="hero">
-  <h1>{{ "Hello World!" | downcase }}</h1>
-  <p class="lead">Consequat massa semper diam congue bibendum erat. Enim nam tincidunt enim in dictumst velit.</p>
+  {{ hero }}
+</section>
+
+<section id="bullets">
+  {% for bullet in site.data.bullets %}
+    <div class="bullet">
+      <h2>{{bullet.heading}}</h2>
+      <p class="lead">{{ bullet.text }}</p>
+    </div>
+  {% endfor %}
+</section>
+
+<section id="illustration">
+  {{ illustration.content }}
+  <p class="lead">{{ illustration.lead }}</p>
+  <a href="{{ illustration.url }}">Les mer om {{ illustration.title | downcase }}</a>
+  {% if illustration.image %}
+  <img src="/assets/images/{{illustration.image}}">
+  {% endif %}
 </section>
 
 <section id="info">
-  {% assign section = site.pages | where: "title", "About" | first %}
   <div class="text">
-    <h2>{{ section.title }}</h2>
-    <p class="lead">{{ section.lead }}</p>
-    <a href="{{ section.url }}">Les mer om {{ section.title | downcase }}</a>
+    <h2>{{ about.title }}</h2>
+    <p class="lead">{{ about.lead }}</p>
+    <a href="{{ section.url }}">Les mer om {{ about.title | downcase }}</a>
   </div>
-  {% if section.image %}
-  <img src="/assets/images/{{section.image}}">
+  {% if about.image %}
+  <img src="/assets/images/{{about.image}}">
   {% endif %}
 </section>
 
@@ -25,7 +45,7 @@ title: Home
     <h2>Posts</h2>
     <a href="/posts">Se alle</a>
   </div>
-  {% for post in site.posts limit:2 %}
+  {% for post in site.posts.section limit:2 %}
     <article>
       <h3>{{ post.title }}</h3>
       {{ post.excerpt }}
