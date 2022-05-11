@@ -1,0 +1,20 @@
+- type: 'hero'
+  heading: "Tittel / Slogan"
+  text: "Consequat massa semper diam congue bibendum erat. Enim nam tincidunt enim in dictumst velit."
+
+- type: 'bullet'
+  heading: 'Lav risiko'
+  text: 'Du forholder deg til én aktør som står for prosjekteringen og installasjonen i et komplekst og nytt leverandørlandskap.'
+- type: 'bullet'
+  heading: 'Stabil, grønn og prisgunstig kraftleveranse'
+  text: 'En stor og trygg leverandør – TrønderEnergi – står for kraftleveransen til installasjonen og garanterer for grønn og konkurransedyktig priset leveranse av strøm inkludert i de månedlige driftskostnadene.'
+- type: 'bullet'
+  heading: 'Ingen kapitalbinding'
+  text: 'Finansiering av installasjonen dekkes gjennom de månedlige kostnadene for anlegget og skrives ned i løpet av installasjonens levetid som beregnes til 20 år.'
+
+- type: 'illustration'
+  heading: 'Bærekraftig tjenesteplattform for reduksjon av C02 og energiforbruk i prosessindustrien'
+  image: 'none'
+- type: 'illustration'
+  heading: 'Bærekraftig tjenesteplattform for reduksjon av C02 og energiforbruk i prosessindustrien'
+  image: 'none'

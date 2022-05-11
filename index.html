@@ -3,31 +3,34 @@ layout: default
 title: Home
 ---
 
-{% assign hero = site.categories.sections | where: "title", "Hero" | first %}
 {% assign illustration = site.categories.sections | where: "title", "Illustration" | first %}
 {% assign about = site.categories.sections | where: "title", "About" | first %}
 
+{% assign hero = site.data.sections | where: "type", "hero" | first %}
+{% assign bullets = site.data.sections | where: "type", "bullet" %}
+{% assign illustrations = site.data.sections | where: "type", "illustration" %}
+
 <section id="hero">
-  {{ hero }}
+    <h1>{{ hero.heading }}</h1>
+    <p class="hero">{{ hero.text }}</p>
 </section>
 
+{% for illustration in illustrations %}
+  <section id="illustration">
+    <h2>{{ illustration.heading }}</h2>
+    <img src="{{ illustration.image }}">
+  </section>
+{% endfor %}
+
 <section id="bullets">
-  {% for bullet in site.data.bullets %}
+  {% for bullet in bullets %}
     <div class="bullet">
       <h2>{{bullet.heading}}</h2>
-      <p class="lead">{{ bullet.text }}</p>
+      <p class="lead">{{bullet.text}}</p>
     </div>
   {% endfor %}
 </section>
 
-<section id="illustration">
-  {{ illustration.content }}
-  <p class="lead">{{ illustration.lead }}</p>
-  <a href="{{ illustration.url }}">Les mer om {{ illustration.title | downcase }}</a>
-  {% if illustration.image %}
-  <img src="/assets/images/{{illustration.image}}">
-  {% endif %}
-</section>
 
 <section id="info">
   <div class="text">
