@@ -17,7 +17,4 @@
 
 - type: 'illustration'
   heading: 'Bærekraftig tjenesteplattform for reduksjon av C02 og energiforbruk i prosessindustrien'
-  image: 'none'
-- type: 'illustration'
-  heading: 'Bærekraftig tjenesteplattform for reduksjon av C02 og energiforbruk i prosessindustrien'
-  image: 'none'
+  image: 'illustration.svg'
