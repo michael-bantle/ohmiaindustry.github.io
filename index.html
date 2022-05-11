@@ -25,6 +25,9 @@ title: Home
 <section id="bullets">
   {% for bullet in bullets %}
     <div class="bullet">
+      {% if bullet.icon %}
+        <img src="/assets/icons/light/{{ bullet.icon }}.svg">
+      {% endif %}
       <h2>{{bullet.heading}}</h2>
       <p class="lead">{{bullet.text}}</p>
     </div>
