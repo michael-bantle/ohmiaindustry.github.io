@@ -20,9 +20,9 @@ title: Home
   </section>
 {% endfor %}
 
-<section id="bullets">
+<section id="bullets" class="dark">
   {% for bullet in bullets %}
-    <div class="bullet">
+    <div class="textbox bullet">
       {% if bullet.icon %}
         <img src="/assets/icons/light/{{ bullet.icon }}.svg">
       {% endif %}
@@ -33,34 +33,36 @@ title: Home
 </section>
 
 <section id="employees">
-  <div class="text">
-    <h2>{{ employees.heading }}</h2>
-    <p>{{ employees.text }}</p>
+  <h2>{{ employees.heading }}</h2>
+  <p>{{ employees.text }}</p>
+  <div class="listbox">
+    {% for employee in employees.people %}
+      <div class="employee">
+        <img src="/assets/images/people/{{employee.image}}">
+        <h6>{{ employee.title }}</h6>
+        <p class="lead">{{ employee.name }}</p>
+      </div>
+    {% endfor %}
   </div>
-  {% for employee in employees.people %}
-    <div class="employee">
-      <img src="/assets/images/people/{{employee.image}}">
-      <h6>{{ employee.title }}</h6>
-      <h3>{{ employee.name }}</h3>
-    </div>
-  {% endfor %}
 </section>
 
-<section id="posts">
-  <div class="section-heading">
-    <h2>Posts</h2>
-    <a href="/posts">Se alle</a>
+<section id="posts" class="dark">
+  <div class="headingbox">
+    <h2>Aktuelt</h2>
+    <a href="/posts" class="button light">Se alle</a>
   </div>
-  {% for post in site.posts limit:2 %}
-    <article>
-      {% if post.image %}
-        <img src="/assets/images/posts/{{ post.image }}">
-      {% endif %}
-      <div class="text">
-        <h3>{{ post.title | capitalize }}</h3>
-        {{ post.excerpt }}
-      </div>
-      <a href="{{ post.url }}" class="button box">Les mer om {{ post.title | downcase }}</a>
-    </article>
-  {% endfor %}
+  <div class="listbox">
+    {% for post in site.posts limit:2 %}
+      <article class="light">
+        {% if post.image %}
+          <img src="/assets/images/posts/{{ post.image }}">
+        {% endif %}
+        <div class="textbox">
+          <h3>{{ post.title | capitalize }}</h3>
+          {{ post.excerpt }}
+        </div>
+        <a href="{{ post.url }}" class="button box">Les mer om {{ post.title | downcase }}</a>
+      </article>
+    {% endfor %}
+  </div>
 </section>

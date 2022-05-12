@@ -1,11 +1,11 @@
 <header>
   <nav>
-    <a href="/">
+    <a href="/" class="button header">
       <img src="/assets/images/ohmia-industri-logo-white.png">
     </a>
     <span></span>
     {% for item in site.data.navigation %}
-      <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %} {% if item.target %}target="{{item.target}}"{% endif %}>
+      <a href="{{ item.link }}" {% if page.url == item.link %}class="button header current"{% else %}class="button header"{% endif %} {% if item.target %}target="{{item.target}}"{% endif %}>
         {% if item.icon %}<img src="/assets/icons/light/{{ item.icon }}.svg">{% else %}{{ item.name }}{% endif %}</a>
     {% endfor %}
   </nav>
