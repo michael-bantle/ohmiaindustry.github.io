@@ -9,6 +9,7 @@ title: Home
 {% assign hero = site.data.sections | where: "type", "hero" | first %}
 {% assign bullets = site.data.sections | where: "type", "bullet" %}
 {% assign illustrations = site.data.sections | where: "type", "illustration" %}
+{% assign employees = site.data.employees %}
 
 <section id="hero">
     <h1>{{ hero.heading }}</h1>
@@ -34,16 +35,18 @@ title: Home
   {% endfor %}
 </section>
 
-
-<section id="info">
+<section id="employees">
   <div class="text">
-    <h2>{{ about.title }}</h2>
-    <p class="lead">{{ about.lead }}</p>
-    <a href="{{ section.url }}">Les mer om {{ about.title | downcase }}</a>
+    <h2>{{ employees.heading }}</h2>
+    <p>{{ employees.text }}</p>
   </div>
-  {% if about.image %}
-  <img src="/assets/images/{{about.image}}">
-  {% endif %}
+  {% for employee in employees.people %}
+    <div class="employee">
+      <img src="/assets/images/people/{{employee.image}}">
+      <h3>{{ employee.name }}</h3>
+      <p>{{ employee.title }}</p>
+    </div>
+  {% endfor %}
 </section>
 
 <section id="posts">
