@@ -43,8 +43,8 @@ title: Home
   {% for employee in employees.people %}
     <div class="employee">
       <img src="/assets/images/people/{{employee.image}}">
+      <h6>{{ employee.title }}</h6>
       <h3>{{ employee.name }}</h3>
-      <p>{{ employee.title }}</p>
     </div>
   {% endfor %}
 </section>
