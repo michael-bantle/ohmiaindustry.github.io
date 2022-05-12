@@ -1,6 +1,7 @@
 ---
 layout: post
 author: admin
+image: testanlegg.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis tincidunt urna, quis facilisis enim porttitor quis. Integer suscipit nulla nibh. Vestibulum sed tempus lacus. Curabitur eget nunc vitae turpis congue maximus quis nec eros. Suspendisse non neque semper, dignissim diam a, efficitur magna. Suspendisse potenti. Sed lobortis porttitor scelerisque. Duis vehicula augue ligula, nec varius massa venenatis eu. Nunc efficitur dui nisi, sed consequat ipsum condimentum vel.
 

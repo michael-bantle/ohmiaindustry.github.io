@@ -3,9 +3,6 @@ layout: default
 title: Home
 ---
 
-{% assign illustration = site.categories.sections | where: "title", "Illustration" | first %}
-{% assign about = site.categories.sections | where: "title", "About" | first %}
-
 {% assign hero = site.data.sections | where: "type", "hero" | first %}
 {% assign bullets = site.data.sections | where: "type", "bullet" %}
 {% assign illustrations = site.data.sections | where: "type", "illustration" %}
@@ -54,11 +51,16 @@ title: Home
     <h2>Posts</h2>
     <a href="/posts">Se alle</a>
   </div>
-  {% for post in site.posts.section limit:2 %}
+  {% for post in site.posts limit:2 %}
     <article>
-      <h3>{{ post.title }}</h3>
-      {{ post.excerpt }}
-      <a href="{{ post.url }}">Les mer om {{ post.title | downcase }}</a>
+      {% if post.image %}
+        <img src="/assets/images/posts/{{ post.image }}">
+      {% endif %}
+      <div class="text">
+        <h3>{{ post.title | capitalize }}</h3>
+        {{ post.excerpt }}
+      </div>
+      <a href="{{ post.url }}" class="button box">Les mer om {{ post.title | downcase }}</a>
     </article>
   {% endfor %}
 </section>
