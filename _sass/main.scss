@@ -45,32 +45,22 @@ header{
   width: 100%;
   box-sizing: border-box;
 
-  *:first-child{
-    margin-top: 0;
-  }
+  *:first-child{margin-top: 0;}
+  &.centered{text-align: center;}
 }
 
-.listbox{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.headingbox{
+.listbox, .headingbox{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 
-  .button{
-    align-self: flex-start;
-  }
+  *:first-child{margin-top: 0;}
+  .button{align-self: flex-start;}
 }
 
 .bullet{
   padding: 96px;
-  text-align: center;
 
   h2, p{
     max-width: 768px;
@@ -140,10 +130,6 @@ article {
       color: $color-text-light-highlight;
       background-color: rgba(255,255,255,.1);
     }
-
-    &.current {
-      color: green;
-    }
   }
 
   img{
@@ -154,7 +140,6 @@ article {
 
 section{
   padding: 96px;
-  *:first-child{margin-top: 0;}
 }
 
 section#hero{

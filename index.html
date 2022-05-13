@@ -9,20 +9,24 @@ title: Home
 {% assign employees = site.data.employees %}
 
 <section id="hero">
+  <div class="textbox">
     <h1>{{ hero.heading }}</h1>
     <p class="hero">{{ hero.text }}</p>
+  </div>
 </section>
 
 {% for illustration in illustrations %}
   <section id="illustration">
-    <h2>{{ illustration.heading }}</h2>
-    <img src="/assets/images/{{ illustration.image }}">
+    <div class="textbox">
+      <h2>{{ illustration.heading }}</h2>
+      <img src="/assets/images/{{ illustration.image }}">
+    </div>
   </section>
 {% endfor %}
 
 <section id="bullets" class="dark">
   {% for bullet in bullets %}
-    <div class="textbox bullet">
+    <div class="textbox bullet centered">
       {% if bullet.icon %}
         <img src="/assets/icons/light/{{ bullet.icon }}.svg">
       {% endif %}
@@ -33,11 +37,13 @@ title: Home
 </section>
 
 <section id="employees">
-  <h2>{{ employees.heading }}</h2>
-  <p>{{ employees.text }}</p>
+  <div class="textbox">
+    <h2>{{ employees.heading }}</h2>
+    <p>{{ employees.text }}</p>
+  </div>
   <div class="listbox">
     {% for employee in employees.people %}
-      <div class="employee">
+      <div class="textbox employee">
         <img src="/assets/images/people/{{employee.image}}">
         <h6>{{ employee.title }}</h6>
         <p class="lead">{{ employee.name }}</p>
