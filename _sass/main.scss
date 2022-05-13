@@ -50,6 +50,7 @@ header{
 }
 
 .listbox, .headingbox{
+  padding: 24px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -176,7 +177,7 @@ h1{
 h2{
   font-size: 48px;
   line-height: 64px;
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
   text-transform: none;
   text-decoration: none;
@@ -291,4 +292,80 @@ blockquote{
   margin: 24px 0;
   padding: 0 24px 0 40px;
   border-left: 8px solid rgba(0,0,0,.1);
+}
+
+// Responsivity
+
+@media screen and (max-width: 1024px){
+  section, .bullet{
+    padding: 48px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  section, .bullet{
+    padding: 48px 24px;
+  }
+  section#hero{
+    padding-top: 240px;
+  }
+  .bullet.centered{
+    text-align: left;
+    img{
+      margin-left: 0;
+    }
+  }
+  .listbox{
+    flex-direction: column;
+    row-gap: 24px;
+  }
+  article{
+    width: 100%;
+  }
+  .employee{
+    text-align: left;
+    padding: 0;
+    img{
+      float: left;
+      margin: 0 24px 0 0;
+    }
+  }
+  h1{
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+  h2{
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+  h3{
+    font-size: 24px;
+    line-height: 32px;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  h5{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  p{
+    &.lead{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &.hero{
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px){
+  section{
+    padding: 48px 0;
+  }
 }
