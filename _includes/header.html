@@ -8,5 +8,11 @@
       <a href="{{ item.link }}" {% if page.url == item.link %}class="button header current"{% else %}class="button header"{% endif %} {% if item.target %}target="{{item.target}}"{% endif %}>
         {% if item.icon %}<img src="/assets/icons/light/{{ item.icon }}.svg">{% else %}{{ item.name }}{% endif %}</a>
     {% endfor %}
+    <a href="{{ site.data.contact.facebook }}" class="button header" target="_blank">
+      <img src="/assets/icons/light/facebook.svg">
+    </a>
+    <a href="{{ site.data.contact.linkedin }}" class="button header" target="_blank">
+      <img src="/assets/icons/light/linkedin.svg">
+    </a>
   </nav>
 </header>
