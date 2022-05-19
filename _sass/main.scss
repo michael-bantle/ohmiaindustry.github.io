@@ -145,6 +145,9 @@ img{
     width: 96px;
     height: 96px;
   }
+  &.mobile{
+    display: none;
+  }
 }
 
 .button{
@@ -345,6 +348,8 @@ blockquote{
   .row{
     flex-direction: column;
   }
+  img.desktop{display: none;}
+  img.mobile{display: block;}
   h1{
     font-size: 32px;
     line-height: 48px;
