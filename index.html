@@ -19,7 +19,7 @@ title: Home
   <section id="illustration">
     <div class="textbox">
       <h2>{{ illustration.heading }}</h2>
-      <img src="/assets/images/{{ illustration.image }}">
+      <img class="full" src="/assets/images/{{ illustration.image }}">
     </div>
   </section>
 {% endfor %}
@@ -28,7 +28,7 @@ title: Home
   {% for bullet in bullets %}
     <div class="textbox">
       {% if bullet.icon %}
-        <img src="/assets/icons/light/{{ bullet.icon }}.svg">
+        <img class="bullet" src="/assets/icons/light/{{ bullet.icon }}.svg">
       {% endif %}
       <h2>{{bullet.heading}}</h2>
       <p class="lead">{{bullet.text}}</p>
@@ -44,7 +44,7 @@ title: Home
   <div class="listbox">
     {% for employee in employees.people %}
       <div class="textbox employee">
-        <img src="/assets/images/people/{{employee.image}}">
+        <img class="bullet" src="/assets/images/people/{{employee.image}}">
         <h6>{{ employee.title }}</h6>
         <p class="lead">{{ employee.name }}</p>
       </div>

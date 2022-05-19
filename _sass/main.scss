@@ -60,22 +60,6 @@ header{
   .button{align-self: flex-start;}
 }
 
-.bullet{
-  padding: 96px;
-
-  h2, p{
-    max-width: 768px;
-    margin: 24px auto;
-  }
-
-  img{
-    width: 96px;
-    height: 96px;
-    margin: auto;
-    display: block;
-  }
-}
-
 .employee{
   flex-basis: calc((100% - 48px) / 3);
   padding: 24px;
@@ -83,13 +67,6 @@ header{
   text-align: center;
 
   h6, p{margin: 0;}
-
-  img{
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 24px auto;
-    display: block;
-  }
 }
 
 article {
@@ -139,6 +116,18 @@ article {
   }
 }
 
+img{
+  &.full{
+    width: 100%;
+  }
+  &.bullet{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 24px auto;
+    display: block;
+  }
+}
+
 section{
   padding: 96px;
 }
@@ -153,13 +142,17 @@ section#hero{
 
 section#bullets{
   padding: 0;
+  h2, p {
+    max-width: 768px;
+    margin: 24px auto;
+  }
+  .textbox{
+    padding: 96px;
+    text-align: center;
+  }
   div:nth-child(1){background-color: rgba(255,255,255,0);}
   div:nth-child(2){background-color: rgba(255,255,255,0.1);}
   div:nth-child(3){background-color: rgba(255,255,255,0.2);}
-}
-
-section#illustration{
-  img{width: 100%;}
 }
 
 // Typography
