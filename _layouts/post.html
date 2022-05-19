@@ -2,9 +2,14 @@
 layout: default
 ---
 <section>
-  <div class="content heading">
+  {% if page.image %}
+    <div class="content hero green" style="background-image: linear-gradient(0deg, rgba(40,100,90,.75), rgba(40,100,90,.75)), url('/assets/images/posts/{{page.image}}');">
+  {% else %}
+    <div class="content heading">
+  {% endif %}
     <h1>{{ page.title | capitalize }}</h1>
     <p>{{ page.date | date_to_string }}</p>
+    {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
   </div>
   <div class="content">
     {{ content }}

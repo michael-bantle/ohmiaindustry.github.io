@@ -18,7 +18,11 @@ title: Posts
           {% endif %}
           <div class="text">
             <h3>{{ post.title | capitalize }}</h3>
-            {{ post.excerpt }}
+            {% if post.lead %}
+              <p>{{ post.lead }}</p>
+            {% else %}
+              {{ post.excerpt }}
+            {% endif %}
           </div>
         </article>
       </a>
