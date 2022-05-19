@@ -6,6 +6,10 @@ $color-brand-white-default: rgba(255,255,255,1);
 $color-brand-green-default: rgba(40,100,90,1);
 $color-brand-green-overlay: rgba(40,100,90,.75);
 $color-brand-green-100: rgba(40,100,90,.1);
+$color-text-darkgreen-default: darken($color-brand-green-default, 10%);
+$color-text-darkgreen-highlight: $color-brand-green-default;
+$color-text-lightgreen-default: lighten($color-brand-green-default, 50%);
+$color-text-lightgreen-highlight: lighten($color-brand-green-default, 75%);
 $color-background-light: rgba(240,240,240,1);
 
 html{
@@ -20,6 +24,57 @@ body{
   background-color: darken($color-brand-green-default, 25%);
   //background-color: $color-background-light;
   color: $color-text-dark-default;
+}
+
+.white{
+  background-color: $color-brand-white-default;
+  color: $color-text-dark-default;
+  a{color: $color-text-darkgreen-default;}
+  a:hover{color: $color-text-darkgreen-highlight;}
+}
+.green{
+  background-color: $color-brand-green-default;
+  color: $color-text-light-default;
+  a{color: $color-text-lightgreen-default;}
+  a:hover{color: $color-text-lightgreen-highlight;}
+}
+
+.dark{
+  background-color: darken($color-brand-green-default, 25%);
+  color: $color-text-light-default;
+  a{color: $color-text-lightgreen-default;}
+  a:hover{color: $color-text-lightgreen-highlight;}
+}
+
+.button{
+  padding: 12px 24px;
+  margin: 0 0 24px 0;
+  display: inline-block;
+  background-color: $color-brand-green-default;
+  color: $color-text-light-default;
+  &:hover{
+    background-color: lighten($color-brand-green-default, 10%);
+    color: $color-text-light-highlight;
+  }
+
+  &.white{
+    background-color: $color-brand-white-default;
+    color: $color-text-dark-default;
+    &:hover{
+      background-color: darken($color-brand-white-default, 10%);
+      color: $color-text-dark-highlight;
+    }
+  }
+
+  &.header{
+    padding: 24px;
+    font-size: 20px;
+  }
+
+  img{
+    height: 24px;
+    display: block;
+  }
 }
 
 header{
@@ -121,10 +176,13 @@ section#bullets{
 }
 
 a.card{
+  color: $color-text-dark-default;
   text-decoration: none;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover{box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+  &:hover{
+    color: $color-text-dark-default;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
   article{
     flex-grow: 1;
   }
@@ -151,44 +209,9 @@ img{
   }
 }
 
-.button{
-  padding: 12px 24px;
-  margin: 0 0 24px 0;
-  display: inline-block;
-  color: $color-text-light-default;
-  background-color: $color-brand-green-default;
-
-  &:hover{background-color: lighten($color-brand-green-default, 10%);}
-  &.white:hover{background-color: darken($color-brand-white-default, 10%);}
-
-  &.header{
-    padding: 24px;
-    font-size: 20px;
-  }
-
-  img{
-    height: 24px;
-    display: block;
-  }
-}
-
 // Remove top-marging on first item
 .content > *:first-child{
   margin-top: 0;
-}
-
-.white{
-  background-color: $color-brand-white-default;
-  color: $color-text-dark-default;
-}
-.green{
-  background-color: $color-brand-green-default;
-  color: $color-text-light-default;
-}
-
-.dark{
-  background-color: darken($color-brand-green-default, 25%);
-  color: $color-text-light-default;
 }
 
 // Typography
@@ -281,6 +304,11 @@ a{
   text-transform: none;
   text-decoration: underline;
   margin: 24px 0 24px 0;
+  color: $color-text-darkgreen-default;
+  &:hover{
+    color: $color-text-darkgreen-highlight;
+    text-decoration: none;
+  }
 
   &.button{
     font-weight: 700;
