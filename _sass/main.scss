@@ -52,6 +52,10 @@ section{
   background-color: $color-background-light;
 }
 
+section#hero{
+  background: linear-gradient(0deg, $color-brand-green-overlay, $color-brand-green-overlay), url("/assets/images/hero1.jpg");
+}
+
 section#bullets{
   div:nth-child(1){background-color: rgba(255,255,255,0);}
   div:nth-child(2){background-color: rgba(255,255,255,0.1);}
