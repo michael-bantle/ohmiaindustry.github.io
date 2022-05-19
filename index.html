@@ -8,8 +8,8 @@ title: Home
 {% assign illustrations = site.data.sections | where: "type", "illustration" %}
 {% assign employees = site.data.employees %}
 
-<section id="hero">
-  <div class="textbox">
+<section id="hero" class="green">
+  <div class="content hero">
     <h1>{{ hero.heading }}</h1>
     <p class="hero">{{ hero.text }}</p>
   </div>
@@ -17,16 +17,16 @@ title: Home
 
 {% for illustration in illustrations %}
   <section id="illustration">
-    <div class="textbox">
+    <div class="content">
       <h2>{{ illustration.heading }}</h2>
       <img class="full" src="/assets/images/{{ illustration.image }}">
     </div>
   </section>
 {% endfor %}
 
-<section id="bullets" class="dark">
+<section id="bullets" class="green">
   {% for bullet in bullets %}
-    <div class="textbox">
+    <div class="content centered">
       {% if bullet.icon %}
         <img class="bullet" src="/assets/icons/light/{{ bullet.icon }}.svg">
       {% endif %}
@@ -37,38 +37,44 @@ title: Home
 </section>
 
 <section id="employees">
-  <div class="textbox">
+  <div class="content centered heading">
     <h2>{{ employees.heading }}</h2>
     <p>{{ employees.text }}</p>
   </div>
-  <div class="listbox">
-    {% for employee in employees.people %}
-      <div class="textbox employee">
-        <img class="bullet" src="/assets/images/people/{{employee.image}}">
-        <h6>{{ employee.title }}</h6>
-        <p class="lead">{{ employee.name }}</p>
-      </div>
-    {% endfor %}
+  <div class="content">
+    <div class="row col3">
+      {% for employee in employees.people %}
+        <div class="card horizontal white">
+          <img class="employee" src="/assets/images/people/{{employee.image}}">
+          <div class="text">
+            <h6>{{ employee.title }}</h6>
+            <p class="lead">{{ employee.name }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-<section id="posts" class="dark">
-  <div class="headingbox">
+<section id="posts" class="green">
+  <div class="content centered heading">
     <h2>Aktuelt</h2>
-    <a href="/posts" class="button light">Se alle</a>
   </div>
-  <div class="listbox">
+  <div class="content">
+    <div class="row col2">
     {% for post in site.posts limit:2 %}
-      <article class="light">
-        {% if post.image %}
-          <img src="/assets/images/posts/{{ post.image }}">
-        {% endif %}
-        <div class="textbox">
-          <h3>{{ post.title | capitalize }}</h3>
-          {{ post.excerpt }}
-        </div>
-        <a href="{{ post.url }}" class="button box">Les mer om {{ post.title | downcase }}</a>
-      </article>
+      <a class="card vertical white" href="{{ post.url }}">
+        <article>
+          {% if post.image %}
+            <img class="full" src="/assets/images/posts/{{ post.image }}">
+          {% endif %}
+          <div class="text">
+            <h3>{{ post.title | capitalize }}</h3>
+            {{ post.excerpt }}
+          </div>
+        </article>
+      </a>
     {% endfor %}
+    <a href="/posts" class="button white">Se alle innlegg</a>
   </div>
 </section>
