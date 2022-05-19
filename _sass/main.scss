@@ -54,6 +54,7 @@ section{
 
 section#hero{
   background: linear-gradient(0deg, $color-brand-green-overlay, $color-brand-green-overlay), url("/assets/images/hero1.jpg");
+  background-size: cover;
 }
 
 section#bullets{
@@ -320,6 +321,9 @@ blockquote{
   margin: 24px 0;
   padding: 0 24px 0 40px;
   border-left: 8px solid rgba(0,0,0,.1);
+  p{
+    margin: 24px 0;
+  }
 }
 
 // Responsivity
