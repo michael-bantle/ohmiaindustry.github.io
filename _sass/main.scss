@@ -10,6 +10,7 @@ $color-brand-green-100: rgba(40,100,90,.1);
 html, body{
   margin: 0;
   padding: 0;
+  min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
   background-color: $color-brand-white-default;
   color: $color-text-dark-default;
@@ -155,6 +156,25 @@ section#bullets{
   div:nth-child(3){background-color: rgba(255,255,255,0.2);}
 }
 
+footer{
+  padding: 96px;
+  color: $color-text-light-default;
+  background-color: darken($color-brand-green-default,25%);
+
+  div{flex-grow: 1;}
+  span{display: block;}
+  p{
+    margin: 0 0 24px 0;
+    vertical-align: middle;
+  }
+
+  .icon{
+    display: inline-block;
+    float: left;
+    margin: 0 12px 0 0;
+  }
+}
+
 // Typography
 
 h1{
@@ -290,23 +310,17 @@ blockquote{
 // Responsivity
 
 @media screen and (max-width: 1024px){
-  section, .bullet{
+  section, footer{
     padding: 48px;
   }
 }
 
 @media screen and (max-width: 768px){
-  section, .bullet{
+  section, footer{
     padding: 48px 24px;
   }
   section#hero{
     padding-top: 240px;
-  }
-  .bullet.centered{
-    text-align: left;
-    img{
-      margin-left: 0;
-    }
   }
   .listbox{
     flex-direction: column;
@@ -358,7 +372,7 @@ blockquote{
 }
 
 @media screen and (max-width: 640px){
-  section{
+  section, footer{
     padding: 48px 0;
   }
 }
