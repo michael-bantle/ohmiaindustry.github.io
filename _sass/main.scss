@@ -8,18 +8,24 @@ $color-brand-green-overlay: rgba(40,100,90,.5);
 $color-brand-green-100: rgba(40,100,90,.1);
 $color-background-light: rgba(240,240,240,1);
 
-html, body{
+html{
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
-  background-color: $color-background-light;
+}
+
+body{
+  margin: 0;
+  padding: 72px 0 0 0;
+  background-color: darken($color-brand-green-default, 25%);
+  //background-color: $color-background-light;
   color: $color-text-dark-default;
 }
 
 header{
   background-color: $color-brand-green-default;
   position: fixed;
+  top: 0;
   width: 100%;
 
   nav{
@@ -43,6 +49,7 @@ footer{
 section{
   margin: 0;
   padding: 0;
+  background-color: $color-background-light;
 }
 
 section#bullets{
@@ -166,6 +173,7 @@ img{
   background-color: $color-brand-green-default;
   color: $color-text-light-default;
 }
+
 .dark{
   background-color: darken($color-brand-green-default, 25%);
   color: $color-text-light-default;
