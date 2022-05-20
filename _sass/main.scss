@@ -330,7 +330,7 @@ code{
 }
 
 ul, ol{
-  margin: 12px 0;
+  margin: 12px 0 24px 0;
   padding: 0 0 0 48px;
   font-size: 16px;
   line-height: 24px;
@@ -353,6 +353,11 @@ blockquote{
   p{
     margin: 24px 0;
   }
+}
+
+hr{
+  margin: 48px 0;
+  border-style: solid;
 }
 
 // Responsivity
