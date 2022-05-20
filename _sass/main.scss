@@ -415,3 +415,13 @@ blockquote{
     }
   }
 }
+
+//Hack to hide header items (replace with burger?)
+@media screen and (max-width: 520px){
+  nav a.button{
+    display: none;
+  }
+  nav a.button:first-child{
+    display: block;
+  }
+}
