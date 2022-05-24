@@ -1,21 +1,21 @@
-- type: 'hero'
-  heading: "Tittel / Slogan"
+- type: "hero"
+  heading: "Title / Slogan"
   text: "Consequat massa semper diam congue bibendum erat. Enim nam tincidunt enim in dictumst velit."
 
-- type: 'bullet'
-  heading: 'Lav risiko'
-  text: 'Du forholder deg til én aktør som står for prosjekteringen og installasjonen i et komplekst og nytt leverandørlandskap.'
-  icon: 'check-circle-outline'
-- type: 'bullet'
-  heading: 'Stabil, grønn og prisgunstig kraftleveranse'
-  text: 'En stor og trygg leverandør – TrønderEnergi – står for kraftleveransen til installasjonen og garanterer for grønn og konkurransedyktig priset leveranse av strøm inkludert i de månedlige driftskostnadene.'
-  icon: 'leaf'
-- type: 'bullet'
-  heading: 'Ingen kapitalbinding'
-  text: 'Finansiering av installasjonen dekkes gjennom de månedlige kostnadene for anlegget og skrives ned i løpet av installasjonens levetid som beregnes til 20 år.'
-  icon: 'cash-lock-open'
+- type: "bullet"
+  heading: "Low risk"
+  text: "You relate to one actor who is responsible for the design and installation in a complex and new supplier landscape."
+  icon: "check-circle-outline"
+- type: "bullet"
+  heading: "Stable, green and affordable power delivery"
+  text: "A large and secure supplier - TrønderEnergi - is responsible for the power delivery to the installation and guarantees a green and competitively priced supply of electricity included in the monthly operating costs."
+  icon: "leaf"
+- type: "bullet"
+  heading: "No tied-up capital"
+  text: "Financing of the installation is covered through the monthly costs of the plant and written down during the installation's lifetime which is estimated at 20 years"
+  icon: "cash-lock-open"
 
-- type: 'illustration'
-  heading: 'Bærekraftig tjenesteplattform for reduksjon av C02 og energiforbruk i prosessindustrien'
-  image-desktop: 'illustration-desktop.png'
-  image-mobile: 'illustration-mobile.png'
+- type: "illustration"
+  heading: "Sustainable service platform for reducing C02 and energy consumption in the process industry"
+  image-desktop: "illustration-desktop.png"
+  image-mobile: "illustration-mobile.png"

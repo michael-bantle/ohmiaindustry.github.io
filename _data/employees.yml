@@ -1,12 +1,9 @@
-heading: 'Ansatte'
-text: 'Tekst om våre ansatte'
+heading: "Employees"
+text: "Text about our employees"
 people:
-  - name: Ola Nordmann
-    title: Ingeniør
-    image: ola_nordmann.jpg
-  - name: Kari Olsen
-    title: Montør
-    image: kari_olsen.jpg
-  - name: Muhammed Johansen
-    title: Kundebehandler
-    image: muhammed_johansen.jpg
+  - name: "Ola Nordmann"
+    title: "Engineer"
+    image: "ola_nordmann.jpg"
+  - name: "Kari Olsen"
+    title: "Installer"
+    image: "kari_olsen.jpg"
