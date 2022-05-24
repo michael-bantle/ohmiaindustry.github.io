@@ -7,6 +7,7 @@ title: Home
 {% assign bullets = site.data.sections | where: "type", "bullet" %}
 {% assign illustrations = site.data.sections | where: "type", "illustration" %}
 {% assign employees = site.data.employees %}
+{% assign partners = site.data.partners %}
 
 <section id="hero" class="green">
   <div class="content hero">
@@ -43,7 +44,7 @@ title: Home
     <p>{{ employees.text }}</p>
   </div>
   <div class="content">
-    <div class="row col3">
+    <div class="row col2">
       {% for employee in employees.people %}
         <div class="card horizontal white">
           <img class="employee" src="/assets/images/people/{{employee.image}}">
@@ -81,5 +82,19 @@ title: Home
       </a>
     {% endfor %}
     <a href="/aktuelt" class="button white">Se alle innlegg</a>
+  </div>
+</section>
+
+<section id="partners">
+  <div class="content centered heading">
+    <h2>{{ partners.heading }}</h2>
+    <p>{{ partners.text }}</p>
+  </div>
+  <div class="content">
+    <div class="row col3">
+      {% for partner in partners.people %}
+        <img class="partner" src="/assets/images/partners/{{partner.image}}" alt="{{ partner.name }}">
+      {% endfor %}
+    </div>
   </div>
 </section>

@@ -205,6 +205,10 @@ img{
     width: 96px;
     height: 96px;
   }
+  &.partner{
+    margin: auto;
+    flex-grow: 0 !important;
+  }
   &.mobile{
     display: none;
   }
