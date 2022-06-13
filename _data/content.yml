@@ -35,6 +35,6 @@ employees:
 partners:
   heading: "Our partners"
   text: "Optional text about our partners"
-  people:
+  logos:
     - name: "Felleskjøpet"
       image: "logo-felleskjopet.svg"
