@@ -40,6 +40,7 @@ The information contained in the footer at the bottom is stored in the file "con
 
 Posts are stored in the folder "_posts". They are written in [Markdown](https://www.markdownguide.org/basic-syntax/).
 
+#### Add post
 To create a post, add a file to your _posts directory with the following filename-format:
 
 > YEAR-MONTH-DAY-title.md
@@ -50,6 +51,8 @@ Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers. For
 
 > 2012-09-12-how-to-write-a-blog.md
 
+#### Featured image and lead text
+
 To add a bakground-image and lead-text to the top of a post and on the card on the landing-page, the following must be added to the top of the file. Images must also be added to the "assets/images" folder.
 >\---
 >image: filename.jpg
@@ -58,4 +61,10 @@ To add a bakground-image and lead-text to the top of a post and on the card on t
 
 To use local images, they must be uploaded to "assets/images" and linked in the post like this:
 
+#### Local images
+
 > \![Image caption]\(/assets/images/filename.jpg)
+
+#### Deletion
+
+To remove posts, just delete the .md file
