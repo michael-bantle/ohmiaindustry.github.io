@@ -1,21 +1,40 @@
-- type: "hero"
+hero:
   heading: "Title / Slogan"
   text: "Consequat massa semper diam congue bibendum erat. Enim nam tincidunt enim in dictumst velit."
 
-- type: "bullet"
-  heading: "Low risk"
-  text: "You relate to one actor who is responsible for the design and installation in a complex and new supplier landscape."
-  icon: "check-circle-outline"
-- type: "bullet"
-  heading: "Stable, green and affordable power delivery"
-  text: "A large and secure supplier - TrønderEnergi - is responsible for the power delivery to the installation and guarantees a green and competitively priced supply of electricity included in the monthly operating costs."
-  icon: "leaf"
-- type: "bullet"
-  heading: "No tied-up capital"
-  text: "Financing of the installation is covered through the monthly costs of the plant and written down during the installation's lifetime which is estimated at 20 years"
-  icon: "cash-lock-open"
-
-- type: "illustration"
+illustration:
   heading: "Sustainable service platform for reducing C02 and energy consumption in the process industry"
   image-desktop: "illustration-desktop.png"
   image-mobile: "illustration-mobile.png"
+
+bullets:
+- heading: "Low risk"
+  text: "You relate to one actor who is responsible for the design and installation in a complex and new supplier landscape."
+  icon: "check-circle-outline"
+
+- heading: "Stable, green and affordable power delivery"
+  text: "A large and secure supplier - TrønderEnergi - is responsible for the power delivery to the installation and guarantees a green and competitively priced supply of electricity included in the monthly operating costs."
+  icon: "leaf"
+
+- heading: "No tied-up capital"
+  text: "Financing of the installation is covered through the monthly costs of the plant and written down during the installation's lifetime which is estimated at 20 years"
+  icon: "cash-lock-open"
+
+employees:
+  heading: "Employees"
+  text: "Text about our employees"
+  people:
+  - name: "Ola Nordmann"
+    title: "Engineer"
+    image: "ola_nordmann.jpg"
+
+  - name: "Kari Olsen"
+    title: "Installer"
+    image: "kari_olsen.jpg"
+
+partners:
+  heading: "Our partners"
+  text: "Optional text about our partners"
+  people:
+    - name: "Felleskjøpet"
+      image: "logo-felleskjopet.svg"

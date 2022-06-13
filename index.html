@@ -3,11 +3,11 @@ layout: default
 title: Ohmia Industry
 ---
 
-{% assign hero = site.data.sections | where: "type", "hero" | first %}
-{% assign bullets = site.data.sections | where: "type", "bullet" %}
-{% assign illustrations = site.data.sections | where: "type", "illustration" %}
-{% assign employees = site.data.employees %}
-{% assign partners = site.data.partners %}
+{% assign hero = site.data.content.hero %}
+{% assign illustration = site.data.content.illustration %}
+{% assign bullets = site.data.content.bullets %}
+{% assign employees = site.data.content.employees %}
+{% assign partners = site.data.content.partners %}
 
 <section id="hero" class="green">
   <div class="content hero">
@@ -16,15 +16,13 @@ title: Ohmia Industry
   </div>
 </section>
 
-{% for illustration in illustrations %}
-  <section id="illustration">
-    <div class="content centered">
-      <h2>{{ illustration.heading }}</h2>
-      <img class="full desktop" src="/assets/images/{{ illustration.image-desktop }}">
-      <img class="full mobile" src="/assets/images/{{ illustration.image-mobile }}">
-    </div>
-  </section>
-{% endfor %}
+<section id="illustration">
+  <div class="content centered">
+    <h2>{{ illustration.heading }}</h2>
+    <img class="full desktop" src="/assets/images/{{ illustration.image-desktop }}">
+    <img class="full mobile" src="/assets/images/{{ illustration.image-mobile }}">
+  </div>
+</section>
 
 <section id="bullets" class="green">
   {% for bullet in bullets %}

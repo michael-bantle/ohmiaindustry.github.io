@@ -1,9 +1,0 @@
-heading: "Employees"
-text: "Text about our employees"
-people:
-  - name: "Ola Nordmann"
-    title: "Engineer"
-    image: "ola_nordmann.jpg"
-  - name: "Kari Olsen"
-    title: "Installer"
-    image: "kari_olsen.jpg"
