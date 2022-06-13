@@ -45,7 +45,7 @@ title: Ohmia Industry
     <div class="row col2">
       {% for employee in employees.people %}
         <div class="card horizontal white">
-          <img class="employee" src="/assets/images/people/{{employee.image}}">
+          <img class="employee" src="/assets/images/employees/{{employee.image}}">
           <div class="text">
             <h6>{{ employee.title }}</h6>
             <p class="lead">{{ employee.name }}</p>
@@ -66,7 +66,7 @@ title: Ohmia Industry
       <a class="card vertical white" href="{{ post.url }}">
         <article>
           {% if post.image %}
-            <img class="full" src="/assets/images/posts/{{ post.image }}">
+            <img class="full" src="/assets/images/{{ post.image }}">
           {% endif %}
           <div class="text">
             <h3>{{ post.title | capitalize }}</h3>
