@@ -1,6 +1,4 @@
 ---
-layout: post
-author: admin
 image: testanlegg.jpg
 lead: Dette er en test-ingress
 ---

@@ -1,7 +1,3 @@
----
-layout: post
-author: admin
----
 # H1 / Page
 ## H2 / Section
 ### H3 / Article
