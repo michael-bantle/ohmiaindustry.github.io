@@ -9,90 +9,86 @@ title: Ohmia Industry
 {% assign employees = site.data.content.employees %}
 {% assign partners = site.data.content.partners %}
 
-<section id="hero" class="green">
-  <div class="content hero">
+<section id="hero" class="col-2">
+  <div class="text pad-large">
     <h1>{{ hero.heading }}</h1>
-    <p class="hero">{{ hero.text }}</p>
+    <p class="lead">{{ hero.text }}</p>
   </div>
+  <div class="image" style="background-image: url('/assets/images/hero/hero.jpg')"></div>
+
 </section>
 
-<section id="illustration">
-  <div class="content centered">
+<section id="illustration" class="col-2">
+  <div class="pad-large">
+    <h6>Our vision</h6>
     <h2>{{ illustration.heading }}</h2>
-    <img class="full desktop" src="/assets/images/illustration/{{ illustration.image-desktop }}">
-    <img class="full mobile" src="/assets/images/illustration/{{ illustration.image-mobile }}">
   </div>
+  <img class="pad-medium" src="/assets/images/illustration/{{ illustration.image-desktop }}">
+  <!--<img class="full mobile" src="/assets/images/illustration/{{ illustration.image-mobile }}">-->
 </section>
 
-<section id="bullets" class="green">
+<section id="bullets" class="col-3 col-gutter">
   {% for bullet in bullets %}
-    <div class="content centered">
+    <div class="card bullet pad-medium">
       {% if bullet.icon %}
-        <img class="bullet" src="/assets/icons/light/{{ bullet.icon }}.svg">
+        <img src="/assets/icons/light/{{ bullet.icon }}.svg">
       {% endif %}
       <h2>{{bullet.heading}}</h2>
-      <p class="lead">{{bullet.text}}</p>
+      <p>{{bullet.text}}</p>
     </div>
   {% endfor %}
 </section>
 
-<section id="employees">
-  <div class="content centered heading">
+<section id="employees" class="col-3 col-gutter">
+  <div class="pad-large">
     <h2>{{ employees.heading }}</h2>
     <p>{{ employees.text }}</p>
   </div>
-  <div class="content">
-    <div class="row col2">
-      {% for employee in employees.people %}
-        <div class="card horizontal white">
-          <img class="employee" src="/assets/images/employees/{{employee.image}}">
-          <div class="text">
-            <h6>{{ employee.title }}</h6>
-            <p class="lead">{{ employee.name }}</p>
-          </div>
-        </div>
-      {% endfor %}
+  <div class="col-span col-2 col-gutter">
+  {% for employee in employees.people %}
+    <div class="card employee pad-small">
+      <img class="employee" src="/assets/images/employees/{{employee.image}}">
+      <h6>{{ employee.title }}</h6>
+      <h4>{{ employee.name }}</h4>
     </div>
+  {% endfor %}
   </div>
 </section>
 
-<section id="posts" class="green">
-  <div class="content centered heading">
+<section id="posts" class="col-3 col-gutter green">
+  <div class="pad-large">
     <h2>News</h2>
+    <a href="/news" class="">See all posts</a>
   </div>
-  <div class="content">
-    <div class="row col2">
+  <div class="col-span col-2 col-gutter">
     {% for post in site.posts limit:2 %}
-      <a class="card vertical white" href="{{ post.url }}">
-        <article>
-          {% if post.image %}
-            <img class="full" src="/assets/images/{{ post.image }}">
+      <a class="card news" href="{{ post.url }}">
+        {% if post.image %}
+          <div class="image" style="background-image: url('/assets/images/{{ post.image }}')"></div>
+        {% endif %}
+        <div class="text pad-small">
+          <h3>{{ post.title | capitalize }}</h3>
+          {% if post.lead %}
+            <p>{{ post.lead }}</p>
+          {% else %}
+            {{ post.excerpt }}
           {% endif %}
-          <div class="text">
-            <h3>{{ post.title | capitalize }}</h3>
-            {% if post.lead %}
-              <p>{{ post.lead }}</p>
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </div>
-        </article>
+        </div>
+        <div class="button pad-small">Read more</div>
       </a>
     {% endfor %}
-    <a href="/aktuelt" class="button white">See all posts</a>
-  </div>
+    </div>
 </section>
 
-<section id="partners">
-  <div class="content centered heading">
+
+<section id="partners" class="col-3 col-gutter">
+  <div class="pad-medium">
     <h2>{{ partners.heading }}</h2>
     <p>{{ partners.text }}</p>
   </div>
-  <div class="content">
-    <div class="row col3">
-      {% for partner in partners.logos %}
-        <img class="partner" src="/assets/images/partners/{{partner.image}}" alt="{{ partner.name }}">
-      {% endfor %}
-    </div>
+  <div class="col-span col-2 col-gutter">
+    {% for partner in partners.logos %}
+      <img class="pad-large" src="/assets/images/partners/{{partner.image}}" alt="{{ partner.name }}">
+    {% endfor %}
   </div>
 </section>

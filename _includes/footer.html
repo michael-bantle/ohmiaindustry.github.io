@@ -1,16 +1,12 @@
-<footer class="dark">
-  <div class="content">
-    <div class="row col2">
-      <div>
-        <h5>Ohmia Industry</h5>
-        <p>Org. number: {{ site.data.contact.organisation-number }}</p>
-        <p>Visit us on <a href="{{ site.data.contact.facebook }}">Facebook</a> and <a href="{{ site.data.contact.linkedin }}">LinkedIn</a></p>
-      </div>
-      <div>
-        <img class="icon" src="/assets/icons/light/phone.svg" alt="Telefon"><p>{{ site.data.contact.telephone }}</p>
-        <img class="icon" src="/assets/icons/light/email.svg" alt="E-post"><p>{{ site.data.contact.mail }}</p>
-        <img class="icon" src="/assets/icons/light/domain.svg" alt="Adresse"><p>{{ site.data.contact.street }}, {{ site.data.contact.postcode }} {{ site.data.contact.city }}</p>
-      </div>
+<footer class="col-2">
+    <div class="textbox pad-large">
+      <h5>Ohmia Industry</h5>
+      <p>Org. number: {{ site.data.contact.organisation-number }}</p>
+      <p>Visit us on <a href="{{ site.data.contact.facebook }}">Facebook</a> and <a href="{{ site.data.contact.linkedin }}">LinkedIn</a></p>
     </div>
-  </div>
+    <div class="textbox pad-large">
+      <img class="icon" src="/assets/icons/light/phone.svg" alt="Telefon"><p>{{ site.data.contact.telephone }}</p>
+      <img class="icon" src="/assets/icons/light/email.svg" alt="E-post"><p>{{ site.data.contact.mail }}</p>
+      <img class="icon" src="/assets/icons/light/domain.svg" alt="Adresse"><p>{{ site.data.contact.street }}, {{ site.data.contact.postcode }} {{ site.data.contact.city }}</p>
+    </div>
 </footer>

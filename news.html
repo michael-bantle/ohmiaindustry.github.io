@@ -3,29 +3,29 @@ layout: default
 title: Ohmia Industry - Posts
 ---
 
-
-<section id="posts" class="light">
-  <div class="content centered heading">
-    <h2>All posts</h2>
+<section id="hero">
+  <div class="text pad-large">
+    <h1>News</h1>
   </div>
-  <div class="content">
-    <div class="row col2">
-    {% for post in site.posts %}
-      <a class="card vertical white" href="{{ post.url }}">
-        <article>
-          {% if post.image %}
-            <img class="full" src="/assets/images/{{ post.image }}">
+</section>
+
+<section id="posts">
+  <div class="col-span col-2 col-gutter">
+    {% for post in site.posts limit:2 %}
+      <a class="card news" href="{{ post.url }}">
+        {% if post.image %}
+          <div class="image" style="background-image: url('/assets/images/{{ post.image }}')"></div>
+        {% endif %}
+        <div class="text pad-small">
+          <h3>{{ post.title | capitalize }}</h3>
+          {% if post.lead %}
+            <p>{{ post.lead }}</p>
+          {% else %}
+            {{ post.excerpt }}
           {% endif %}
-          <div class="text">
-            <h3>{{ post.title | capitalize }}</h3>
-            {% if post.lead %}
-              <p>{{ post.lead }}</p>
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </div>
-        </article>
+        </div>
+        <div class="button pad-small">Read more</div>
       </a>
     {% endfor %}
-  </div>
+    </div>
 </section>

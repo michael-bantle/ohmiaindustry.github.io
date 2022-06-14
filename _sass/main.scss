@@ -1,84 +1,35 @@
+$color-brand-default: rgba(40,100,90,1);
+$color-brand-highlight: lighten(rgba(40,100,90,1),10%);
+$color-background-accent-default: rgba(0,160,130,.1);
+$color-background-accent-highlight: rgba(0,160,130,.5);
+$color-background-dark-default: rgba(5,15,10,1);
+$color-background-white-default: rgba(255,255,255,1);
+
 $color-text-light-default: rgba(255,255,255,.9);
-$color-text-light-highlight: rgba(255,255,255,1);
 $color-text-dark-default: rgba(0,0,0,.9);
-$color-text-dark-highlight: rgba(0,0,0,1);
-$color-brand-white-default: rgba(255,255,255,1);
-$color-brand-green-default: rgba(40,100,90,1);
-$color-brand-green-overlay: rgba(40,100,90,.75);
-$color-brand-green-100: rgba(40,100,90,.1);
-$color-text-darkgreen-default: darken($color-brand-green-default, 10%);
-$color-text-darkgreen-highlight: $color-brand-green-default;
-$color-text-lightgreen-default: lighten($color-brand-green-default, 50%);
-$color-text-lightgreen-highlight: lighten($color-brand-green-default, 75%);
-$color-background-light: rgba(240,240,240,1);
+$color-text-brand-default: rgba(40,100,90,.9);
+$color-text-brand-highlight: rgba(40,100,90,1);
+$color-text-accent-default: rgba(0,160,130,.9);
+$color-text-accent-highlight: rgba(0,160,130,1);
 
 html{
-  margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 body{
-  margin: 0;
   padding: 72px 0 0 0;
-  background-color: darken($color-brand-green-default, 25%);
-  //background-color: $color-background-light;
-  color: $color-text-dark-default;
+  margin: 0;
+  background-color: #f9f9f9;
 }
 
-.white{
-  background-color: $color-brand-white-default;
-  color: $color-text-dark-default;
-  a{color: $color-text-darkgreen-default;}
-  a:hover{color: $color-text-darkgreen-highlight;}
-}
-.green{
-  background-color: $color-brand-green-default;
-  color: $color-text-light-default;
-  a{color: $color-text-lightgreen-default;}
-  a:hover{color: $color-text-lightgreen-highlight;}
-}
-
-.dark{
-  background-color: darken($color-brand-green-default, 25%);
-  color: $color-text-light-default;
-  a{color: $color-text-lightgreen-default;}
-  a:hover{color: $color-text-lightgreen-highlight;}
-}
-
-.button{
-  padding: 12px 24px;
-  margin: 0 0 24px 0;
-  display: inline-block;
-  background-color: $color-brand-green-default;
-  color: $color-text-light-default;
-  &:hover{
-    background-color: lighten($color-brand-green-default, 10%);
-    color: $color-text-light-highlight;
-  }
-
-  &.white{
-    background-color: $color-brand-white-default;
-    color: $color-text-dark-default;
-    &:hover{
-      background-color: darken($color-brand-white-default, 10%);
-      color: $color-text-dark-highlight;
-    }
-  }
-
-  &.header{
-    padding: 24px;
-    font-size: 20px;
-  }
-
-  img{
-    height: 24px;
-    display: block;
-  }
+section, footer{
+  padding: 48px;
 }
 
 header{
-  background-color: $color-brand-green-default;
+  background-color: $color-brand-default;
   position: fixed;
   top: 0;
   width: 100%;
@@ -86,169 +37,199 @@ header{
   nav{
     display: flex;
     flex-direction: row;
+    padding: 0 48px;
+  }
+
+  .button{
+    padding: 24px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   span{
     flex-grow: 1;
   }
+
+  img{
+    height: 24px;
+  }
 }
 
 footer{
-  h5{margin-top: 0;}
-  .icon{
+  background-color: $color-background-dark-default;
+  color: $color-text-light-default;
+  img{
     margin-right: 12px;
     float: left;
   }
-}
-
-section{
-  margin: 0;
-  padding: 0;
-  background-color: $color-background-light;
-}
-
-section#hero{
-  background: linear-gradient(0deg, $color-brand-green-overlay, $color-brand-green-overlay), url("/assets/images/hero/hero.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-section#bullets{
-  div:nth-child(1){background-color: rgba(255,255,255,0);}
-  div:nth-child(2){background-color: rgba(255,255,255,0.1);}
-  div:nth-child(3){background-color: rgba(255,255,255,0.2);}
-}
-
-.content{
-  margin: 0;
-  padding: 96px;
-
-  &.hero{
-    padding-top: 384px;
-    background-size: cover;
-  }
-  &.heading{
-    padding-bottom: 0;
-    *:last-child{margin-bottom: 0;}
-  }
-  &.centered{
-    text-align: center;
-    p{
-      max-width: 768px;
-      margin: auto;
+  a{
+    color: $color-text-accent-default;
+    &:hover{
+      color: $color-text-accent-highlight;
     }
   }
 }
 
-.row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 24px;
-
-  &.col2 > *{
-    flex-basis: calc((100% / 2) - (1 * 24px));
-    flex-grow: 1;
-  }
-  &.col3 > *{
-    flex-basis: calc((100% / 3) - (2 * 24px));
-    flex-grow: 1;
-  }
-  .button{
-    flex-basis: auto;
-    flex-grow: 0;
-    margin-left: auto;
-  }
-}
-
-.card{
-  display: flex;
-  margin: 0;
-  &.horizontal{flex-direction: row;}
-  &.vertical{flex-direction: column;}
+#hero{
   .text{
-    padding: 24px;
-    flex-grow: 1;
-
-    *:first-child{margin-top: 0;}
-    *:last-child{margin-bottom: 0;}
+    background-color: $color-brand-default;
+    color: $color-text-light-default;
+  }
+  .image{
+    min-height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+    background-color: $color-brand-default;
   }
 }
 
-a.card{
-  color: $color-text-dark-default;
-  text-decoration: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  &:hover{
-    color: $color-text-dark-default;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
-  article{
-    flex-grow: 1;
-  }
-  &::after{
-    content: "Read more";
-    text-align: right;
-    font-weight: 700;
-    padding: 24px;
-    background-color: $color-brand-green-100;
+#posts.green{
+  background-color: $color-brand-default;
+  color: $color-text-light-default;
+  a{
+    color: inherit;
   }
 }
+
+.pad-large{padding: 96px;}
+.pad-medium{padding: 48px;}
+.pad-small{padding: 24px;}
 
 img{
   max-width: 100%;
-  &.full{width: 100%;}
-  &.bullet{width: 96px;}
-  &.employee{
-    padding: 24px 0 24px 24px;
-    width: 96px;
-    height: 96px;
-  }
-  &.partner{
-    margin: auto;
-    flex-grow: 0 !important;
-  }
-  &.mobile{
-    display: none;
+  box-sizing: border-box;
+  display: block;
+  align-self: flex-start;
+  &.pad-none{
+    padding: 0;
   }
 }
 
-// Remove top-marging on first item
-.content > *:first-child{
-  margin-top: 0;
+div{
+  box-sizing: border-box;
+}
+
+.col-2{
+  display: flex;
+  flex-wrap: wrap;
+  > * {width: calc(100% / 2);}
+  &.col-gutter > * {width: calc((100% - (24px * 1)) / 2);}
+}
+
+.col-3{
+  display: flex;
+  flex-wrap: wrap;
+  > * {width: calc(100% / 3);}
+  &.col-gutter > * {width: calc((100% - (24px * 2)) / 3);}
+}
+
+.col-span {flex-grow: 1;}
+
+.col-gutter{gap: 24px;}
+
+.card{
+  flex-grow: 0;
+  margin: 0;
+  &.bullet{
+    text-align: center;
+    background-color: $color-background-accent-default;
+    color: $color-brand-default;
+    img{
+      background-color: $color-brand-default;
+      width: 96px;
+      padding: 12px;
+      border-radius: 48px;
+      margin: 0 auto 24px auto;
+    }
+  }
+  &.employee{
+    background-color: $color-background-white-default;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 8px 32px 0px;
+    h6{margin: 0 0 8px 0;}
+    img{
+      float: left;
+      width: 64px;
+      margin: 0 24px 0 0;
+    }
+  }
+  &.news{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background-white-default;
+    color: $color-text-dark-default !important;
+    text-decoration: none;
+    transition: box-shadow 200ms;
+    box-shadow: rgba(100, 100, 100, 0.2) 0px 8px 32px 0px;
+    .image{
+      width: 100%;
+      height: 240px;
+      background-size: cover;
+    }
+    .text{
+      flex-grow: 1;
+    }
+    .button{
+      background-color: $color-background-accent-default;
+    }
+    &:hover{
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 8px 16px;
+      .button{
+        background-color: $color-background-accent-highlight;
+      }
+    }
+  }
+}
+
+.button{
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 100ms;
+  &.brand, &.header{
+    background-color: $color-brand-default;
+    color: $color-text-light-default;
+    &:hover{
+      background-color: $color-brand-highlight;
+    }
+  }
 }
 
 // Typography
 
 h1{
-  font-size: 64px;
+  font-size: 80px;
   line-height: 96px;
   font-weight: 700;
   font-style: normal;
   text-transform: none;
   text-decoration: none;
-  margin: 48px 0;
+  margin: 0 0 24px 0
 }
 
 h2{
-  font-size: 48px;
-  line-height: 64px;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: none;
-  text-decoration: none;
-  margin: 48px 0;
-}
-
-h3{
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 40px;
+  line-height: 48px;
   font-weight: 700;
   font-style: normal;
   text-transform: none;
   text-decoration: none;
-  margin: 48px 0 24px 0;
+  margin: 0 0 24px 0
+}
+
+h3{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: none;
+  text-decoration: none;
+  margin: 0 0 24px 0;
+  &:last-child{
+    margin: 0;
+  }
 }
 
 h4{
@@ -258,7 +239,10 @@ h4{
   font-style: normal;
   text-transform: none;
   text-decoration: none;
-  margin: 48px 0 24px 0;
+  margin: 0 0 24px 0;
+  &:last-child{
+    margin: 0;
+  }
 }
 
 h5{
@@ -268,17 +252,18 @@ h5{
   font-style: normal;
   text-transform: none;
   text-decoration: none;
-  margin: 48px 0 24px 0;
+  margin: 0 0 24px 0
 }
 
 h6{
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 48px 0 12px 0;
+  margin: 0 0 24px 0;
+  color: $color-text-brand-default;
 }
 
 p{
@@ -289,6 +274,9 @@ p{
   text-transform: none;
   text-decoration: none;
   margin: 0 0 24px 0;
+  &:last-child{
+    margin: 0;
+  }
 
   &.lead{
     font-size: 24px;
@@ -309,9 +297,9 @@ a{
   text-transform: none;
   text-decoration: underline;
   margin: 24px 0 24px 0;
-  color: $color-text-darkgreen-default;
+  color: $color-text-brand-default;
   &:hover{
-    color: $color-text-darkgreen-highlight;
+    color: $color-text-brand-highlight;
     text-decoration: none;
   }
 
@@ -350,12 +338,12 @@ ul, ol{
 
 blockquote{
   display: inline-block;
-  background-color: rgba(0,0,0,.1);
+  background-color: $color-background-accent-default;
   margin: 24px 0;
   padding: 0 24px 0 40px;
-  border-left: 8px solid rgba(0,0,0,.1);
+  border-left: 8px solid $color-brand-default;
   p{
-    margin: 24px 0;
+    margin: 24px 0 !important;
   }
 }
 
@@ -364,74 +352,86 @@ hr{
   border-style: solid;
 }
 
-// Responsivity
-@media screen and (min-width: 1440px){
-  .content{
-    padding: 96px 192px;
-  }
-}
+@media screen and (max-width: 1280px) {
 
-@media screen and (min-width: 1920px){
-  .content{
-    padding: 96px 384px;
-  }
-}
-
-@media screen and (max-width: 960px){
-  .content{
-    padding: 48px;
-  }
-}
-
-@media screen and (max-width: 768px){
-  .content{
-    padding: 24px;
-  }
-  .row{
-    flex-direction: column;
-  }
-  img.desktop{display: none;}
-  img.mobile{display: block;}
   h1{
-    font-size: 32px;
-    line-height: 48px;
-    margin-bottom: 24px;
+    font-size: 60px;
+    line-height: 72px;
   }
+
   h2{
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h3{
     font-size: 28px;
     line-height: 36px;
-    margin-bottom: 24px;
   }
-  h3{
-    font-size: 24px;
-    line-height: 32px;
-  }
-  h4{
-    font-size: 20px;
-    line-height: 24px;
-  }
-  h5{
-    font-size: 16px;
-    line-height: 24px;
-  }
-  p{
-    &.lead{
-      font-size: 18px;
-      line-height: 24px;
-    }
-    &.hero{
-      font-size: 24px;
-      line-height: 36px;
+
+  #illustration{
+    flex-direction: column;
+    div, img{
+      width: 100%;
     }
   }
 }
 
-//Hack to hide header items (replace with burger?)
-@media screen and (max-width: 520px){
-  nav a.button{
-    display: none;
+@media screen and (max-width: 1024px) {
+
+  section, footer{
+    padding: 24px;
   }
-  nav a.button:first-child{
-    display: block;
+
+  header{
+    nav{
+      padding: 0;
+    }
   }
+
+  #hero{
+    flex-direction: column-reverse;
+    .text, .image{
+      width: 100%;
+    }
+  }
+
+  .col-3{
+    flex-direction: column;
+    > * {width: 100%;}
+    &.col-gutter > * {width: 100%;}
+  }
+  .pad-large{padding: 48px;}
+  .pad-medium{padding: 24px;}
+  .pad-small{padding: 24px;}
+}
+
+@media screen and (max-width: 768px) {
+  body{
+    padding-top: 48px;
+  }
+
+  header{
+    .button{
+      padding: 14px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    img{
+      height: 20px
+    }
+  }
+  .col-2{
+    flex-direction: column;
+    > * {width: 100%;}
+    &.col-gutter > * {width: 100%;}
+  }
+}
+
+@media screen and (max-width: 560px) {
+
+  section, footer{
+    padding: 12px;
+  }
+  .pad-large{padding: 24px;}
 }

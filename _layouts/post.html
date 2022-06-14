@@ -1,17 +1,32 @@
 ---
 layout: default
 ---
-<section>
-  {% if page.image %}
-    <div class="content hero green" style="background-image: linear-gradient(0deg, rgba(40,100,90,.75), rgba(40,100,90,.75)), url('/assets/images/{{page.image}}');">
-  {% else %}
-    <div class="content heading">
-  {% endif %}
+
+{% if page.image %}
+<section id="hero" class="col-2">
+  <div class="text pad-large">
     <h1>{{ page.title | capitalize }}</h1>
+    {% if page.lead %}
+      <p class="lead">{{ page.lead }}</p>
+    {% endif %}
     <p>{{ page.date | date_to_string }}</p>
-    {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
   </div>
-  <div class="content">
+  <div class="image" style="background-image: url('/assets/images/{{ page.image }}')"></div>
+</section>
+{% else %}
+<section id="hero">
+  <div class="text pad-large">
+    <h1>{{ page.title | capitalize }}</h1>
+    {% if page.lead %}
+      <p class="lead">{{ page.lead }}</p>
+    {% endif %}
+    <p>{{ page.date | date_to_string }}</p>
+  </div>
+</section>
+{% endif %}
+
+<section>
+  <div class="textbox pad-large">
     {{ content }}
   </div>
 </section>

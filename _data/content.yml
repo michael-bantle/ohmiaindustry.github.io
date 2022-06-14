@@ -32,6 +32,10 @@ employees:
     title: "Installer"
     image: "kari_olsen.jpg"
 
+  - name: "Kari Olsen"
+    title: "Installer"
+    image: "kari_olsen.jpg"
+
 partners:
   heading: "Our partners"
   text: "Optional text about our partners"
