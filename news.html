@@ -11,7 +11,7 @@ title: Ohmia Industry - Posts
 
 <section id="posts">
   <div class="col-span col-2 col-gutter">
-    {% for post in site.posts limit:2 %}
+    {% for post in site.posts %}
       <a class="card news" href="{{ post.url }}">
         {% if post.image %}
           <div class="image" style="background-image: url('/assets/images/{{ post.image }}')"></div>
