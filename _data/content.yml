@@ -38,7 +38,7 @@ employees:
 
   - name: "Kari Olsen"
     title: "Installer"
-    image: "kari_olsen.jpg"
+    image: 
 
 partners:
   heading: "Our partners"
